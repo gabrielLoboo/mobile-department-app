@@ -14,7 +14,7 @@ export default function Overview() {
   useEffect(()=>{
 
     const fetchList = async () => {
-      const response = await fetch('https://run.mocky.io/v3/49326c97-97ff-4c9f-ba82-20f23933ce41')
+      const response = await fetch('http://192.168.0.23:5085/api/departamento/selecionarTodos')
       const data = await response.json()
       setList(data);
     }
@@ -30,7 +30,7 @@ export default function Overview() {
         renderItem={({ item }) =>(
           <TouchableOpacity onPress={() => navigation.navigate('Details', { todo: item })}>
             <View style={styles.item}>
-              <Text style={styles.text}>{item.title}</Text>
+              <Text style={styles.text}>{item.nome}</Text>
             </View>
           </TouchableOpacity>
         )}  
