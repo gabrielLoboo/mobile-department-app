@@ -2,7 +2,6 @@ import { RouteProp, useRoute } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import { RootStackParamList } from '../navigation';
 import { FlatList } from 'react-native-gesture-handler';
-import Icon from 'react-native-ionicons';
 
 type DetailsSreenRouteProp = RouteProp<RootStackParamList, 'Details'>;
 
